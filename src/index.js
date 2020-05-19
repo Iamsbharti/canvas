@@ -8,17 +8,17 @@ const ctx = canvas.getContext("2d");
 ctx.width = window.innerWidth;
 ctx.height = window.innerHeight;
 
-ctx.strokeStyle = "#ASDE55";
+ctx.strokeStyle = "Green";
 ctx.lineJoin = "round";
 ctx.lineCap = "round";
-
+ctx.lineWidth = 15;
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
 
 function draw(e) {
   if (!isDrawing) return; //stop func from running when mouse is down
-  console.log(e);
+  //console.log(e);
   //draw
   ctx.beginPath();
   //start from

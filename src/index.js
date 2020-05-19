@@ -15,11 +15,12 @@ ctx.lineWidth = 15;
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
-
+let hue = 0;
 function draw(e) {
   if (!isDrawing) return; //stop func from running when mouse is down
   //console.log(e);
   //draw
+  ctx.strokeStyle = `hsl(${hue},100%,50%)`;
   ctx.beginPath();
   //start from
   ctx.moveTo(lastX, lastY);
@@ -29,6 +30,7 @@ function draw(e) {
   ctx.stroke();
   //update lastx and lasty value
   [lastX, lastY] = [e.offsetX, e.offsetY];
+  hue++;
 }
 
 //add event listeners

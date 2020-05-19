@@ -1,10 +1,13 @@
 import "./styles.css";
+const canvas = document.querySelector("#draw");
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+//get 2d context of canvas
+const ctx = canvas.getContext("2d");
+
+//width according to the window
+ctx.width = window.innerWidth;
+ctx.height = window.innerHeight;
+
+ctx.strokeStyle = "#ASDE55";
+ctx.lineJoin = "round";
+ctx.lineCap = "round";
